@@ -3,15 +3,17 @@ import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 // import PlayButton from '@/components/PlayButton';
 import useBillboard from "@/hooks/useBillboard";
+import PlayButton from "./PlayButton";
+import useInfoModal from "@/hooks/useInfoModal";
 // import useInfoModalStore from '@/hooks/useInfoModalStore';
 
 const Billboard: React.FC = () => {
-  //   const { openModal } = useInfoModalStore();
+  const { openModal } = useInfoModal();
   const { data } = useBillboard();
 
-  //   const handleOpenModal = useCallback(() => {
-  //     openModal(data?.id);
-  //   }, [openModal, data?.id]);
+  const handleOpenModal = useCallback(() => {
+    openModal(data?.id);
+  }, [openModal, data?.id]);
   console.log({ data });
 
   return (
@@ -32,10 +34,9 @@ const Billboard: React.FC = () => {
           {data?.description}
         </p>
         <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
-          {/* <PlayButton movieId={data?.id} /> */}
+          <PlayButton movieId={data?.id} />
           <button
-            // onClick={handleOpenModal}
-            onClick={() => alert("More info")}
+            onClick={handleOpenModal}
             className="
             bg-white
             text-white

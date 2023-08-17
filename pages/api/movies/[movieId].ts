@@ -14,14 +14,16 @@ export default async function handler(
     await serverAuth(req, res);
     const { movieId } = req.query;
 
-    if (typeof movieId !== "string") {
-      throw new Error("Invalid Id");
+    if (typeof movieId !== "string" || movieId === "undefined") {
+      // throw new Error("Invalid Id");
+      return res.status(200).json({});
     }
 
     if (!movieId) {
-      throw new Error("Missing Id");
+      // throw new Error("Missing Id");
+      return res.status(200).json({});
     }
-
+    console.log("Aqui");
     const movie = await prismadb.movie.findUnique({
       where: {
         id: movieId,
