@@ -25,7 +25,7 @@ const Auth = () => {
         email,
         password,
         redirect: true,
-        callbackUrl: "/",
+        callbackUrl: "/profiles",
       });
     } catch (error) {
       console.log(error);
@@ -94,7 +94,7 @@ const Auth = () => {
                 onClick={() =>
                   signIn("google", {
                     redirect: true,
-                    callbackUrl: "/",
+                    callbackUrl: "/profiles",
                   })
                 }
               >
@@ -105,7 +105,7 @@ const Auth = () => {
                 onClick={() =>
                   signIn("github", {
                     redirect: true,
-                    callbackUrl: "/",
+                    callbackUrl: "/profiles",
                   })
                 }
               >
