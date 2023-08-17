@@ -67,6 +67,8 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           src={data.thumbnailUrl}
           alt="Movie"
           draggable={false}
+          width={420}
+          height={219}
           className="
           cursor-pointer
           object-cover
