@@ -2,8 +2,10 @@ import React, { useCallback } from "react";
 import { useRouter } from "next/router";
 // import { ChevronDownIcon } from '@heroicons/react/24/outline';
 // import { PlayIcon } from '@heroicons/react/24/solid';
+import { BsFillPlayFill, BsChevronDown } from "react-icons/bs";
 
 import { MovieInterface } from "@/types";
+import FavoriteButton from "./FavoriteButton";
 // import FavoriteButton from '@/components/FavoriteButton';
 // import useInfoModalStore from '@/hooks/useInfoModalStore';
 
@@ -94,13 +96,15 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               onClick={redirectToWatch}
               className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300"
             >
-              {/* <PlayIcon className="text-black w-4 lg:w-6" /> */}
+              <BsFillPlayFill size={30} />
             </div>
-            {/* <FavoriteButton movieId={data.id} /> */}
+            <FavoriteButton movieId={data.id} />
             <div
               /* onClick={() => openModal(data?.id)} */ className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300"
             >
-              {/* <ChevronDownIcon className="text-white group-hover/item:text-neutral-300 w-4 lg:w-6" /> */}
+              <BsChevronDown
+                className={`w-4 text-white fill-white hover:text-neutral-300 hover:fill-neutral-300`}
+              />
             </div>
           </div>
           <p className="text-green-400 font-semibold mt-4">

@@ -12,19 +12,25 @@ export default async function handler(
     }
 
     await serverAuth(req, res);
+    const { movieId } = req.query;
 
-    const moviesCount = await prismadb.movie.count();
-    const randomIndex = Math.floor(Math.random() * moviesCount);
+    if (typeof movieId !== "string") {
+      throw new Error("Invalid Id");
+    }
 
-    const randomMovies = await prismadb.movie.findMany({
-      take: 1,
-      skip: randomIndex,
+    if (!movieId) {
+      throw new Error("Missing Id");
+    }
+
+    const movie = await prismadb.movie.findUnique({
+      where: {
+        id: movieId,
+      },
     });
 
-    return res.status(200).json(randomMovies[0]);
+    return res.status(200).json(movie);
   } catch (error) {
     console.log(error);
-
     return res.status(500).end();
   }
 }
