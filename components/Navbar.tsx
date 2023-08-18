@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import NavbarItem from "./NavbarItem";
 import { BsBell, BsChevronDown, BsSearch } from "react-icons/bs";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
 import AccountMenu from "./AccountMenu";
 
 const TOP_OFFSET = 66;
@@ -43,7 +44,13 @@ const Navbar = () => {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
+        <img
+          src="/images/logo.png"
+          className="h-4 lg:h-7"
+          alt="Logo"
+          height={40}
+          width={40}
+        />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           <NavbarItem label="Home" active />
           <NavbarItem label="Series" />
@@ -76,7 +83,12 @@ const Navbar = () => {
             className="flex flex-row items-center gap-2 cursor-pointer relative"
           >
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-              <img src="/images/default-green.png" alt="Profile image" />
+              <Image
+                src="/images/default-green.png"
+                alt="Profile image"
+                width={40}
+                height={40}
+              />
             </div>
             <BsChevronDown
               className={`w-4 text-white fill-white transition duration-500" ${

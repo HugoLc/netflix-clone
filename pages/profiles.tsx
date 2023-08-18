@@ -36,7 +36,7 @@ const Profiles = () => {
 
 export default Profiles;
 
-export async function getServerSidePrps(context: NextPageContext) {
+export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
 
   if (!session) {

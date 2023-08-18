@@ -8,6 +8,7 @@ import { MovieInterface } from "@/types";
 import FavoriteButton from "./FavoriteButton";
 // import FavoriteButton from '@/components/FavoriteButton';
 import useInfoModal from "@/hooks/useInfoModal";
+import Image from "next/image";
 
 interface MovieCardProps {
   data: MovieInterface;
@@ -62,7 +63,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         group-hover:opacity-100
       "
       >
-        <img
+        <Image
           onClick={redirectToWatch}
           src={data.thumbnailUrl}
           alt="Movie"
