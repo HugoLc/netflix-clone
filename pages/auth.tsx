@@ -62,7 +62,7 @@ const Auth = () => {
             <Image
               alt="Netflix logo"
               src="/images/logo.png"
-              className="h-12"
+              // className="h-12"
               width={104}
               height={28}
             />
