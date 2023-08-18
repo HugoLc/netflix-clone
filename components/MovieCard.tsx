@@ -31,6 +31,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         alt="Movie"
         width={420}
         height={219}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         draggable={false}
         className="
         cursor-pointer

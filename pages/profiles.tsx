@@ -1,6 +1,7 @@
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 const Profiles = () => {
@@ -15,11 +16,14 @@ const Profiles = () => {
             <div onClick={() => router.push("/")}>
               <div className="group flex-row w-44 mx-auto">
                 <div className="w-44 h-44 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer group-hover:border-white overflow-hidden">
-                  <img
+                  <Image
                     draggable={false}
                     className="w-max h-max object-contain"
                     src="/images/default-green.png"
                     alt="Profile image"
+                    height={172}
+                    width={172}
+                    // sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
