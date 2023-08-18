@@ -12,6 +12,10 @@ const Profiles = () => {
     <>
       <Head>
         <title>Netflix | Who is watching?</title>
+        <meta
+          name="description"
+          content="Manage your Netflix profiles with ease. Customize viewing preferences for each member of your household. Create, edit, and personalize profiles to enhance your streaming experience. Organize your entertainment choices and enjoy a tailored selection of TV shows and movies on Netflix."
+        ></meta>
       </Head>
       <div className="flex items-center h-full justify-center">
         <div className="flex flex-col">

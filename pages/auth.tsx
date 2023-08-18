@@ -51,6 +51,10 @@ const Auth = () => {
     <>
       <Head>
         <title>Netflix | Login</title>
+        <meta
+          name="description"
+          content="Safely access your beloved TV shows and movies on Netflix. Log in now to your account and dive into a world of endless entertainment. Stream, binge-watch, and unwind with our seamless login process."
+        />
       </Head>
       <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
         <div className="bg-black h-full w-full lg:bg-opacity-50">

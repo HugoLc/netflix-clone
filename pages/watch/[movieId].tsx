@@ -14,6 +14,10 @@ const Watch = () => {
     <>
       <Head>
         <title>Netflix | {data?.title}</title>
+        <meta
+          name="description"
+          content="Experience immersive entertainment on Netflix with our high-quality video playback. Watch your favorite TV shows, movies, and original content in stunning detail. Enjoy smooth streaming and captivating storytelling as you indulge in a world of cinematic experiences."
+        ></meta>
       </Head>
       <div className="h-screen w-screen bg-black">
         <nav className="fixed w-full p-4 z-10 flex flex-row items-center gap-8 bg-black bg-opacity-70">

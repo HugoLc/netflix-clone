@@ -18,6 +18,10 @@ export default function Home() {
     <>
       <Head>
         <title>Netflix | Catalog</title>
+        <meta
+          name="description"
+          content="Explore the extensive Netflix catalog featuring a wide array of TV shows, movies, and original content. Discover captivating stories across various genres. Immerse yourself in a world of entertainment and choose what to watch from our diverse catalog."
+        ></meta>
       </Head>
       <InfoModal onClose={() => closeModal()} visible={isOpen}></InfoModal>
       <Navbar />
