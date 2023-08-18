@@ -38,7 +38,7 @@ const Input = ({ id, label, onChange, value, type }: InputProps) => {
         className="
         absolute 
         text-md 
-        text-zinc-400 
+        text-white 
         duration-150 
         transoform 
         -translate-y-3 
