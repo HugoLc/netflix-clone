@@ -46,7 +46,7 @@ const Navbar = () => {
       >
         <Image
           src="/images/logo.png"
-          className="h-4 lg:h-7"
+          className=" lg:h-7"
           alt="Logo"
           height={28}
           width={104}
