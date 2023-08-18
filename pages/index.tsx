@@ -7,6 +7,7 @@ import useInfoModal from "@/hooks/useInfoModal";
 import useMovieList from "@/hooks/useMovieList";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
+import Head from "next/head";
 
 export default function Home() {
   const { data: movies = [] } = useMovieList();
@@ -15,6 +16,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Netflix | Catalog</title>
+      </Head>
       <InfoModal onClose={() => closeModal()} visible={isOpen}></InfoModal>
       <Navbar />
       <Billboard />
