@@ -44,12 +44,12 @@ const Navbar = () => {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <img
+        <Image
           src="/images/logo.png"
           className="h-4 lg:h-7"
           alt="Logo"
-          height={40}
-          width={40}
+          height={28}
+          width={104}
         />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           <NavbarItem label="Home" active />

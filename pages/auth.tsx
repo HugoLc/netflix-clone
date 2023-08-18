@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -30,7 +31,7 @@ const Auth = () => {
     } catch (error) {
       console.log(error);
     }
-  }, [email, password]);
+  }, [email, name, password]);
 
   const register = useCallback(async () => {
     try {
@@ -49,7 +50,13 @@ const Auth = () => {
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="bg-black h-full w-full lg:bg-opacity-50">
         <nav className="px-12 py-5">
-          <img alt="Netflix logo" src="/images/logo.png" className="h-12" />
+          <Image
+            alt="Netflix logo"
+            src="/images/logo.png"
+            className="h-12"
+            width={104}
+            height={28}
+          />
         </nav>
         <div className="flex justify-center">
           <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">

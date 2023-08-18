@@ -25,10 +25,12 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
 
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
-      <img
+      <Image
         onClick={redirectToWatch}
         src={data.thumbnailUrl}
         alt="Movie"
+        width={420}
+        height={219}
         draggable={false}
         className="
         cursor-pointer
