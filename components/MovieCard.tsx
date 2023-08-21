@@ -31,7 +31,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         alt="Movie"
         width={420}
         height={219}
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 33vw"
         draggable={false}
         className="
         cursor-pointer
@@ -73,7 +73,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           draggable={false}
           width={420}
           height={219}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 33vw"
           className="
           cursor-pointer
           object-cover
